@@ -40,6 +40,7 @@ addtask(cursor,conn)
 cursor.execute("SELECT * FROM todolist;")
 data=cursor.fetchall()
 print(data)
+    
 
 
 
