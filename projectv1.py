@@ -68,9 +68,9 @@ while True:
     if opt!=1 and opt!=2 and opt!=3 and opt!=4:
         print("please choose a valid option")
     elif opt==1:
-            view()
-            create()
-            view()
+        view()
+        create()
+        view()
     elif opt==2:
         view()
     elif opt==3:
