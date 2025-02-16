@@ -1,4 +1,4 @@
-#upload this to github after this is done
+#keep the while loop running asking users for tasks
 #make your print statements more descriptive for the users
 #add numbers next to the tasks(?)
 
