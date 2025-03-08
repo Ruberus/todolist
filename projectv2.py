@@ -46,6 +46,8 @@ while True:
         que=int(input('Enter the serial number of task you want to delete: '))
         taskd=''' DELETE FROM todolist 
         WHERE SerialNumber=%s;'''
+        
+    
         cursor.execute(taskd,(que,))
         conn.commit()
 
@@ -71,7 +73,9 @@ while True:
     elif opt==3:
         viewtasks(cursor,conn)
         deltask(cursor,conn)
+        viewtasks(cursor,conn)
     elif opt==4:
+        viewtasks(cursor,conn)
         marktask(cursor,conn)
         viewtasks(cursor,conn)
        
