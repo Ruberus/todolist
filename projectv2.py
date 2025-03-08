@@ -46,10 +46,18 @@ while True:
         que=int(input('Enter the serial number of task you want to delete: '))
         taskd=''' DELETE FROM todolist 
         WHERE SerialNumber=%s;'''
-        
-    
         cursor.execute(taskd,(que,))
         conn.commit()
+        
+        cursor.execute('SELECT SerialNumber FROM todolist ORDER BY SerialNumber;')
+        rows=cursor.fetchall()
+
+        for i,(j,) in enumerate(rows,start=1):
+            query='''UPDATE todolist SET SerialNumber=%s WHERE SerialNumber=%s;'''
+            cursor.execute(query,(i,j))
+            conn.commit()
+    
+    
 
     def marktask(cursor,conn):
         taskw=int(input('Enter the Serial Number of the task:'))
